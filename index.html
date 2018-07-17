@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>MongoDB Easy Backup</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <h1>MongoDB Easy Backup</h1>
+      <form action="#" id="mainForm">
+        <div class="row">
+          <div class="col">
+            Username:<br>
+            <input type="text" name="username" id="username" value="">
+          </div>
+          <div class="col">
+            Password:<br>
+            <input type="password" name="password" id="password" value="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            Hostname:<br>
+            <input type="text" name="hostname" id="hostname" value="">
+          </div>
+        </div> 
+        <div class="row">
+          <div class="col">
+            Custom connect:<br>
+            <input type="text" name="custom-url" id="custom-url" value="">
+          </div>
+        </div>
+        <br>
+        <input id="submit" type="submit" value="Submit" role="button" class="btn btn-success">
+      </form>
+      <br>
+      <div id="status-box">
+        <p id="status"></p>
+      </div>
+      <p id="cur-status">Idle</p>
+    </div>
+    
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>
